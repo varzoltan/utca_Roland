@@ -92,6 +92,7 @@ namespace utca_Roland
 
             Console.Write("Kérem adjon meg egy házszámot: ");
             int bekert_hazszam = int.Parse(Console.ReadLine());
+            string hazszin = null;
             for(int i = 0;i< n;i++ )
             {
                 if (bekert_hazszam == adatok[i].hazszam)
@@ -99,37 +100,34 @@ namespace utca_Roland
                     if(adatok[i].kerites != ":" && adatok[i].kerites != "#")
                     {
                         Console.WriteLine("A kerités szine: {0}",adatok[i].kerites);
+                        hazszin = adatok[i].kerites;
                     }
                     else
                     {
                         Console.WriteLine("A kerités állapota: {0}",adatok[i].kerites);
+                        hazszin = adatok[i].kerites;
                     }
                 }
 
             }
 
             //5.b feladat
-            string szin3 = null;
-            string szin4 = null; 
-            string szin5 = null;
+            szin1 = null;
+            szin2 = null; 
             for (int i = 'A';i <= 'Z';i++)
             {              
                 for (int j = 0;j<n;j++)
                 {
-                    if (bekert_hazszam == adatok[j].hazszam && adatok[j].kerites != ":")
-                    {
-                        szin3 = adatok[j].kerites;
-                    }
                     if (bekert_hazszam - 2 == adatok[j].hazszam)
                     {
-                        szin4 = adatok[j].kerites;
+                        szin1 = adatok[j].kerites;
                     }
                     if (bekert_hazszam + 2 == adatok[j].hazszam)
                     {
-                        szin5 = adatok[j].kerites;
+                        szin2 = adatok[j].kerites;
                     }
                 }
-                if (szin3 != szin4 && szin3 != szin5 && szin3 != Convert.ToChar(i).ToString())
+                if (Convert.ToChar(szin1) != Convert.ToChar(i) && Convert.ToChar(szin2) != Convert.ToChar(i) && Convert.ToChar(hazszin) != Convert.ToChar(i))
                 {
                     Console.WriteLine("Egy lehetséges festési szín: {0}", Convert.ToChar(i));
                     break;
