@@ -1,0 +1,7 @@
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\bin\Debug\utca_Roland.exe.config
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\bin\Debug\utca_Roland.exe
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\bin\Debug\utca_Roland.pdb
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\obj\Debug\utca_Roland.csprojAssemblyReference.cache
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\obj\Debug\utca_Roland.csproj.CoreCompileInputs.cache
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\obj\Debug\utca_Roland.exe
+C:\Users\Rendszergazda\Documents\GitHub\utca_Roland\utca_Roland\obj\Debug\utca_Roland.pdb
