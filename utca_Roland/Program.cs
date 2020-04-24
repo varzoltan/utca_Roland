@@ -87,6 +87,54 @@ namespace utca_Roland
                     k = i;
                 }
             }
+
+            //5.feladat
+
+            Console.Write("Kérem adjon meg egy házszámot: ");
+            int bekert_hazszam = int.Parse(Console.ReadLine());
+            for(int i = 0;i< n;i++ )
+            {
+                if (bekert_hazszam == adatok[i].hazszam)
+                {
+                    if(adatok[i].kerites != ":" && adatok[i].kerites != "#")
+                    {
+                        Console.WriteLine("A kerités szine: {0}",adatok[i].kerites);
+                    }
+                    else
+                    {
+                        Console.WriteLine("A kerités állapota: {0}",adatok[i].kerites);
+                    }
+                }
+
+            }
+
+            //5.b feladat
+            string szin3 = null;
+            string szin4 = null; 
+            string szin5 = null;
+            for (int i = 'A';i <= 'Z';i++)
+            {              
+                for (int j = 0;j<n;j++)
+                {
+                    if (bekert_hazszam == adatok[j].hazszam && adatok[j].kerites != ":")
+                    {
+                        szin3 = adatok[j].kerites;
+                    }
+                    if (bekert_hazszam - 2 == adatok[j].hazszam)
+                    {
+                        szin4 = adatok[j].kerites;
+                    }
+                    if (bekert_hazszam + 2 == adatok[j].hazszam)
+                    {
+                        szin5 = adatok[j].kerites;
+                    }
+                }
+                if (szin3 != szin4 && szin3 != szin5 && szin3 != Convert.ToChar(i).ToString())
+                {
+                    Console.WriteLine("Egy lehetséges festési szín: {0}", Convert.ToChar(i));
+                    break;
+                }
+            }
             Console.ReadKey();
         }
     }
