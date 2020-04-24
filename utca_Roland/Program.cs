@@ -87,7 +87,7 @@ namespace utca_Roland
                     k = i;
                 }
             }
-            Console.ReadKey();//
+            Console.ReadKey();
         }
     }
 }
