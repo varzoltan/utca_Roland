@@ -133,6 +133,39 @@ namespace utca_Roland
                     break;
                 }
             }
+
+            //6.feladat
+            StreamWriter ir = new StreamWriter(@"C:\Users\Rendszergazda\Desktop\2018-oktober\utcakep.txt");
+            for (int i = 0;i<n;i++)
+            {
+                if (adatok[i].oldal == 1)
+                {
+                    for (int j = 0;j<adatok[i].hossza;j++)
+                    {
+                        ir.Write(adatok[i].kerites);
+                    }
+                }
+            }
+            ir.WriteLine();
+            for (int i = 0; i < n; i++)
+            {
+                if (adatok[i].oldal == 1)
+                {
+                    int hsz_kar = adatok[i].hazszam.ToString().Length;
+                    for (int j = 0; j < adatok[i].hossza - hsz_kar + 1; j++)
+                    {
+                        if (j == 0)
+                        {
+                            ir.Write(adatok[i].hazszam);
+                        }
+                        else
+                        {
+                            ir.Write(" ");
+                        }
+                    }
+                }
+            }
+            ir.Close();
             Console.ReadKey();
         }
     }
